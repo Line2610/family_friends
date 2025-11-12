@@ -15,7 +15,7 @@ const FetchProduct = async ({ category }) => {
   const url = category
     ? `https://dummyjson.com/products/category/${category}`
     : "https://dummyjson.com/products";
-  const response = await fetch(url);
+  const response = await fetch(url, { next: { revalidate: 60 } });
   const { products } = await response.json();
 
   return (

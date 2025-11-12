@@ -10,7 +10,9 @@ export default function Home({ searchParams }) {
       <header>
         <NavList />
       </header>
-      <CategoryList />
+      <Suspense>
+        <CategoryList />
+      </Suspense>
       <Suspense>
         <ProductListContainer searchParams={searchParams} />
       </Suspense>
@@ -22,6 +24,6 @@ export default function Home({ searchParams }) {
 }
 
 async function ProductListContainer({ searchParams }) {
-  const { category } = await searchParams;
+  const { category } = searchParams;
   return <List category={category} />;
 }

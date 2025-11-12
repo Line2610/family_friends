@@ -10,7 +10,9 @@ const CategoryList = () => {
 };
 
 const FetchCategories = async () => {
-  const response = await fetch("https://dummyjson.com/products/category-list");
+  const response = await fetch("https://dummyjson.com/products/category-list", {
+    next: { revalidate: 60 },
+  });
   const categories = await response.json();
 
   return (
