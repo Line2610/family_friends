@@ -9,7 +9,6 @@ const Single = ({
   price,
   title,
   brand,
-  slug,
   category,
   rating,
   availabilityStatus,
@@ -49,7 +48,7 @@ const Single = ({
           <p className="rounded-2xl bg-yellow-100 p-2">{availabilityStatus}</p>
         </div>
         <p className="mt-4">{description}</p>
-        <button className="mt-8 w-full rounded-4xl bg-pink-100 p-4">Buy</button>
+        <button className="mt-8 w-full rounded-4xl bg-red-300 p-4">Buy</button>
       </div>
     </>
   );
