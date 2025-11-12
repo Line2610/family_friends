@@ -24,6 +24,6 @@ export default function Home({ searchParams }) {
 }
 
 async function ProductListContainer({ searchParams }) {
-  const { category } = searchParams;
+  const { category } = await searchParams;
   return <List category={category} />;
 }
