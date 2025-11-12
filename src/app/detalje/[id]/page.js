@@ -2,7 +2,7 @@ import Single from "../components/Single";
 import { Suspense } from "react";
 
 export default async function Detalje({ params }) {
-  const { id } = params;
+  const { id } = await params;
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
